@@ -1,0 +1,146 @@
+.intro {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #242424;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+  background: #242424;
+  display: block;
+}
+
+.title {
+  position: relative;
+  font-family: "Pixelify Sans", cursive;
+  letter-spacing: 3px;
+  z-index: 1;
+  background: linear-gradient(90deg, #fff 0%, #049b96 50%, #fff 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  -webkit-text-stroke: 3px #000;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+
+  animation: floatX 3s infinite ease-in-out,
+    gradientMove 2s infinite alternate linear;
+}
+
+.bigArrow {
+  height: auto;
+  filter: drop-shadow(0 0 8px #00fff7) drop-shadow(0 0 18px #40769b);
+  cursor: pointer;
+  transition: filter 0.18s;
+  user-select: none;
+  image-rendering: pixelated;
+  animation: floatY 1.7s infinite ease-in-out;
+  z-index: 1;
+  display: block;
+}
+
+.bigArrow:hover {
+  filter: drop-shadow(0 0 18px #245a7e) drop-shadow(0 0 18px #00fff7);
+  animation-play-state: paused;
+}
+
+@keyframes floatX {
+  0% {
+    transform: translateX(-1vw);
+  }
+  50% {
+    transform: translateX(1vw);
+  }
+  100% {
+    transform: translateX(-1vw);
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(24px);
+  }
+}
+
+@keyframes floatY {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(14px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* 1. Мобильные устройства (до 600px) */
+@media (max-width: 600px) {
+  .title {
+    font-size: clamp(28px, 18vw, 70px);
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  .bigArrow {
+    width: clamp(20px, 25vw, 100px);
+  }
+}
+
+/* 2. Планшеты (601–900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .title {
+    font-size: 7rem;
+    margin-top: 28px;
+    margin-bottom: 28px;
+  }
+  .bigArrow {
+    width: clamp(100px, 15vw, 110px);
+  }
+}
+
+/* 3. Ноутбуки (901–1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .title {
+    font-size: 7.2rem;
+    margin-top: 28px;
+    margin-bottom: 35px;
+  }
+  .bigArrow {
+    width: clamp(110px, 15vw, 130px);
+  }
+}
+
+/* 4. Десктопы (от 1201px) */
+@media (min-width: 1201px) {
+  .title {
+    font-size: 7.2rem;
+    margin-top: 28px;
+    margin-bottom: clamp(32px, 5vw, 40px);
+  }
+  .bigArrow {
+    width: clamp(90px, 12vw, 120px);
+  }
+}

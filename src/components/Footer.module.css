@@ -1,0 +1,54 @@
+.footerGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  background: #000;
+}
+
+.footerCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: "ComicPixel", "Comic Sans MS", cursive, sans-serif;
+  font-size: clamp(1rem, 2vw, 2rem);
+  letter-spacing: 1.5px;
+  margin-top: 0;
+  margin-bottom: 0.8vw;
+  color: #fff;
+  text-align: left;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+  align-items: flex-start;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  text-decoration: none;
+  font-family: "ComicPixel", "Comic Sans MS", cursive, sans-serif;
+  color: #fff;
+  font-size: 1.18em;
+  padding: 0.18em 0.3em;
+}
+
+.socials img {
+  width: 34px;
+  height: 34px;
+  display: block;
+}

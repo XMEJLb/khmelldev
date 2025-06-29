@@ -1,0 +1,65 @@
+.card {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1vw 2vw 1vw;
+  background: none;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.18s cubic-bezier(0.28, 1.25, 0.5, 1.02);
+}
+
+.card:hover,
+.card:focus {
+  transform: translateY(-16px) scale(1.035);
+  z-index: 2;
+}
+
+.card img {
+  width: 82%; /* картинка чуть меньше всей карточки */
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 1.2em;
+  margin-top: 0.8em;
+}
+
+.card h3 {
+  font-family: "ComicPixel", "Comic Sans MS", cursive, sans-serif;
+  color: #fff;
+  text-shadow: 2px 2px 0 #000;
+  margin: 0 0 0.5em 0;
+  text-align: center;
+
+  /* Чёрная пиксельная обводка */
+  text-shadow: 2px 2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000,
+    -2px -2px 0 #000, 2px 0px 0 #000, -2px 0px 0 #000, 0px 2px 0 #000,
+    0px -2px 0 #000;
+}
+
+.card h4 {
+  font-family: "ComicPixel", "Comic Sans MS", cursive, sans-serif;
+  color: #000;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  text-align: justify;
+  margin: 0 0 0.5em 0;
+  padding: 0 0 0 0;
+  line-height: 1.18;
+  word-break: break-word;
+  letter-spacing: 0.01em;
+}
+
+.card div {
+  font-family: "ComicPixel", "Comic Sans MS", cursive, sans-serif;
+  color: #000;
+  font-size: clamp(1rem, 1.2vw, 1.08rem);
+  text-align: justify;
+  padding: 0 0.6em 0.7em 0.6em;
+  line-height: 1.18;
+  word-break: break-word;
+  letter-spacing: 0.01em;
+}
