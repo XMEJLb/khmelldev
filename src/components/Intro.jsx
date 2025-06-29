@@ -1,3 +1,5 @@
+import introVideo from "../assets/intro.mp4";
+import loopVideo from "../assets/loop.mp4";
 import { useRef, useState } from "react";
 import styles from "./Intro.module.css";
 
@@ -23,7 +25,7 @@ export default function Intro({ onArrowClick }) {
         autoPlay
         muted
         playsInline
-        src="/intro.mp4"
+        src={introVideo}
         onEnded={handleIntroEnd}
       />
       {/* Зацикленное видео — только после окончания intro */}
@@ -35,7 +37,7 @@ export default function Intro({ onArrowClick }) {
         autoPlay={showLoop} // чтобы не начиналось до окончания первого
         muted
         playsInline
-        src="/loop.mp4"
+        src={loopVideo}
       />
       <h1 className={styles.title}>Khmelldev</h1>
       <img
