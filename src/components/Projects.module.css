@@ -6,9 +6,8 @@
   background: linear-gradient(
     180deg,
     #000 0%,
-    #000 10%,
-    #191106 15%,
-    #3a260d 35%,
+    #191106 5%,
+    #3a260d 15%,
     #ffd341 75%,
     #ffe285 90%,
     #191106 96%,
@@ -19,7 +18,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 3em;
+  padding-top: 6vh;
 }
 
 .projects::after {
@@ -60,16 +59,16 @@
 
 .projectsTitle {
   font-family: "ComicPixel", "Comic Sans MS", cursive, sans-serif;
-  font-size: clamp(2rem, 4vw, 4rem);
+  font-size: clamp(4rem, 4vw, 6rem);
   letter-spacing: 1.5px;
-  margin-top: 14vh;
-  margin-bottom: 0.5vw;
+  margin-top: 10px;
+  margin-bottom: 10px;
   z-index: 10;
   position: relative;
   text-align: center;
   display: block;
 
-  color: #b1a643; /* Белый текст */
+  color: #b1a643;
 
   /* Чёрная пиксельная обводка */
   text-shadow: 3px 3px 0 #000, -3px 3px 0 #000, 3px -3px 0 #000,
@@ -87,4 +86,19 @@
 
   position: relative;
   z-index: 10;
+}
+
+@media (max-width: 734px) {
+  .cardsGrid {
+    margin-bottom: 120px;
+  }
+  .projects {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .projectsTitle {
+    margin-bottom: 60px;
+  }
 }

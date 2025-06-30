@@ -5,7 +5,7 @@
   align-items: flex-start;
 
   width: 100%;
-  max-width: 1200px;
+
   margin: 0 auto;
   position: relative;
   background: #000;
@@ -13,6 +13,7 @@
 
 .footerCol {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -44,11 +45,25 @@
   font-family: "ComicPixel", "Comic Sans MS", cursive, sans-serif;
   color: #fff;
   font-size: 1.18em;
-  padding: 0.18em 0.3em;
 }
 
 .socials img {
   width: 34px;
   height: 34px;
   display: block;
+}
+
+@media (max-width: 734px) {
+  .title {
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
+  .socials a {
+    font-size: 35px;
+  }
+
+  .socials img {
+    width: 50px;
+    height: 50px;
+  }
 }

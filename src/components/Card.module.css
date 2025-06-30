@@ -45,7 +45,7 @@
   font-family: "ComicPixel", "Comic Sans MS", cursive, sans-serif;
   color: #000;
   font-size: clamp(1rem, 1.5vw, 1.15rem);
-  text-align: justify;
+  text-align: center;
   margin: 0 0 0.5em 0;
   padding: 0 0 0 0;
   line-height: 1.18;
@@ -62,4 +62,24 @@
   line-height: 1.18;
   word-break: break-word;
   letter-spacing: 0.01em;
+}
+
+@media (max-width: 734px) {
+  .card h3 {
+    font-size: 45px;
+  }
+
+  .card h4 {
+    font-size: 30px;
+  }
+
+  .card div {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 80vw;
+  }
 }
