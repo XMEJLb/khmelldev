@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <Intro onArrowClick={handleArrowClick} ref={mainRef} />
+      <Intro onArrowClick={handleArrowClick} />
       <Main ref={mainRef} />
     </>
   );

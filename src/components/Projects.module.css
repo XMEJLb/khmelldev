@@ -1,4 +1,4 @@
-.projects {
+﻿.projects {
   flex: 1 1 auto;
   width: 100%;
   min-height: 0;
@@ -59,7 +59,7 @@
 
 .projectsTitle {
   font-family: "ComicPixel", "Comic Sans MS", cursive, sans-serif;
-  font-size: clamp(4rem, 4vw, 6rem);
+  font-size: clamp(2.4rem, 4vw, 6rem);
   letter-spacing: 1.5px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -95,6 +95,9 @@
   .projects {
     margin-top: 100px;
   }
+  .projectsTitle {
+    font-size: clamp(2rem, 9vw, 3.2rem);
+  }
 }
 
 @media (max-width: 500px) {
@@ -102,3 +105,4 @@
     margin-bottom: 60px;
   }
 }
+

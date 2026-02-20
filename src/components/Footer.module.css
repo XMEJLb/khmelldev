@@ -7,6 +7,7 @@
   width: 100%;
 
   margin: 0 auto;
+  padding: 24px 16px;
   position: relative;
   background: #000;
 }
@@ -55,15 +56,15 @@
 
 @media (max-width: 734px) {
   .title {
-    font-size: 50px;
-    margin-bottom: 15px;
+    font-size: clamp(1.8rem, 9vw, 2.6rem);
+    margin-bottom: 12px;
   }
   .socials a {
-    font-size: 35px;
+    font-size: clamp(1.2rem, 6.5vw, 1.8rem);
   }
 
   .socials img {
-    width: 50px;
-    height: 50px;
+    width: clamp(28px, 8vw, 40px);
+    height: clamp(28px, 8vw, 40px);
   }
 }

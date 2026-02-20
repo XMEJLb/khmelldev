@@ -1,17 +1,17 @@
-import introVideo from "../assets/intro.mp4";
+﻿import introVideo from "../assets/intro.mp4";
 import loopVideo from "../assets/loop.mp4";
 import { useRef, useState } from "react";
 import styles from "./Intro.module.css";
 
 export default function Intro({ onArrowClick }) {
   const [showLoop, setShowLoop] = useState(false);
-  const introRef = useRef(null);
   const loopRef = useRef(null);
+  const baseUrl = import.meta.env.BASE_URL;
 
   // Когда первое видео закончилось — показываем loop-видео
   const handleIntroEnd = () => {
     setShowLoop(true);
-    // сразу ставим loop-видео на play (на всякий случай)
+    // Сразу ставим loop-видео на play (на всякий случай)
     loopRef.current && loopRef.current.play();
   };
 
@@ -21,10 +21,11 @@ export default function Intro({ onArrowClick }) {
       <video
         className={styles.videoBg}
         style={{ opacity: showLoop ? 0 : 1, transition: "opacity 0.6s" }}
-        ref={introRef}
         autoPlay
         muted
         playsInline
+        preload="metadata"
+        aria-hidden="true"
         src={introVideo}
         onEnded={handleIntroEnd}
       />
@@ -37,14 +38,24 @@ export default function Intro({ onArrowClick }) {
         autoPlay={showLoop} // чтобы не начиналось до окончания первого
         muted
         playsInline
+        preload="metadata"
+        aria-hidden="true"
         src={loopVideo}
       />
       <h1 className={styles.title}>Khmelldev</h1>
-      <img
-        src="arrow2.png"
-        className={styles.bigArrow}
+      <button
+        type="button"
+        className={styles.bigArrowButton}
         onClick={onArrowClick}
-      />
+        aria-label="Scroll to projects"
+      >
+        <img
+          src={`${baseUrl}arrow2.png`}
+          className={styles.bigArrow}
+          alt=""
+        />
+      </button>
     </section>
   );
 }
+

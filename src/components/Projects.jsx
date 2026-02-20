@@ -1,4 +1,4 @@
-import styles from "./Projects.module.css";
+﻿import styles from "./Projects.module.css";
 import Card from "./Card";
 
 function Projects() {
@@ -8,17 +8,17 @@ function Projects() {
       src: "richard.webp",
       title: "VPN telegram bot",
       stack: "Node.js, Telegraf.js, SQLite",
-      info: "Автоматизированная продажа и управление VPN-доступом на основе VLESS и x-ui. Интеграция с базой SQLite, генерация ссылок  для подключения, ЛК, интеграция платежки (ЮKassa).",
+      info: "Автоматизированная продажа и управление VPN-доступом на основе VLESS и x-ui. Интеграция с базой SQLite, генерация ссылок для подключения, ЛК, интеграция платежки (ЮKassa).",
     },
     {
-      href: "#",
+      href: "",
       src: "tonybw.png",
       title: "Cube contest (скоро)",
       stack: "React, React-native, Redux",
       info: "Приложение для проведения контестов по скоростной сборке Кубика-Рубика. \n\nТаблицы, результаты, генерация скрамблов.",
     },
     {
-      href: "#",
+      href: "",
       src: "rasmusbw.png",
       title: "Sravni-nastolki (скоро)",
       stack: "React, Node.js, SQLite",
@@ -39,3 +39,4 @@ function Projects() {
 }
 
 export default Projects;
+
